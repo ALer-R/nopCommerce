@@ -14,6 +14,7 @@
         public RenderButtonEdit(DataUrl url)
         {
             Url = url;
+            Style = NopStyleButtonDefaults.Default;
         }
 
         #endregion
@@ -28,7 +29,7 @@
         /// <summary>
         /// Gets or sets button style
         /// </summary>
-        public StyleButton Style { get; set; }
+        public string Style { get; set; }
 
         #endregion
     }

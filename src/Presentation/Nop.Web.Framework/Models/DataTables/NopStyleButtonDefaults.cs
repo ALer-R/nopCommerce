@@ -1,54 +1,46 @@
-﻿using System.Runtime.Serialization;
-
-namespace Nop.Web.Framework.Models.DataTables
+﻿namespace Nop.Web.Framework.Models.DataTables
 {
     /// <summary>
-    /// Represents a button style 
+    /// /// <summary>
+    /// Button styles defaults
     /// https://adminlte.io/themes/AdminLTE/pages/UI/buttons.html
     /// </summary>
-    public enum StyleButton
+    /// </summary>
+    public static partial class NopStyleButtonDefaults
     {
         /// <summary>
         /// Default style
         /// </summary>
-        [EnumMember(Value = "btn btn-default")]
-        Default,
+        public static string Default => "btn btn-default";
 
         /// <summary>
         /// Dark blue style
         /// </summary>
-        [EnumMember(Value = "btn btn-primary")]
-        Primary,
+        public static string Primary => "btn btn-primary";
 
         /// <summary>
         /// Green style
         /// </summary>
-        [EnumMember(Value = "btn btn-success")]
-        Success,
+        public static string Success => "btn btn-success";
 
         /// <summary>
         /// Blue style
         /// </summary>
-        [EnumMember(Value = "btn btn-info")]
-        Info,
+        public static string Info => "btn btn-info";
 
         /// <summary>
         /// Red style
         /// </summary>
-        [EnumMember(Value = "btn btn-danger")]
-        Danger,
+        public static string Danger => "btn btn-danger";
 
         /// <summary>
         /// Orange style
         /// </summary>
-        [EnumMember(Value = "btn btn-warning")]
-        Warning,
+        public static string Warning => "btn btn-warning";
 
         /// <summary>
         /// Olive style
         /// </summary>
-        [EnumMember(Value = "btn bg-olive")]
-        Olive        
-
+        public static string Olive => "btn bg-olive";
     }
 }

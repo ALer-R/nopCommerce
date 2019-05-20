@@ -44,13 +44,13 @@
                         {
                             Title = T("Admin.Catalog.Attributes.SpecificationAttributes.Fields.DisplayOrder").Text,
                             Width = "100",
-                            ClassName =  StyleColumn.CenterAll
+                            ClassName =  NopStyleColumnDefaults.CenterAll
                         },
                         new ColumnProperty(nameof(SpecificationAttributeModel.Id))
                         {
                             Title = T("Admin.Common.Edit").Text,
                             Width = "100",
-                            ClassName =  StyleColumn.ButtonStyle,
+                            ClassName =  NopStyleColumnDefaults.ButtonStyle,
                             Render = new RenderButtonEdit(new DataUrl("Edit"))
                         }
                     }
