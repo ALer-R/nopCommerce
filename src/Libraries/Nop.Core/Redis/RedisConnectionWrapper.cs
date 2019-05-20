@@ -99,16 +99,11 @@ namespace Nop.Core.Redis
         /// <summary>
         /// Obtain an interactive connection to a database inside Redis
         /// </summary>
-        /// <param name="db">Database number; pass null to use the default value</param>
+        /// <param name="db">Database number</param>
         /// <returns>Redis cache database</returns>
-        public IDatabase GetDatabase(RedisDatabaseNumber db = RedisDatabaseNumber.Default)
+        public IDatabase GetDatabase(int db)
         {
-            // if we should use the default database only
-            if (_config.RedisUseDefaultDatabase)
-                // change the database number to default
-                db = RedisDatabaseNumber.Default;
-
-            return GetConnection().GetDatabase((int)db);
+            return GetConnection().GetDatabase(db);
         }
 
         /// <summary>
@@ -134,7 +129,7 @@ namespace Nop.Core.Redis
         /// Delete all the keys of the database
         /// </summary>
         /// <param name="db">Database number</param>
-        public void FlushDatabase(RedisDatabaseNumber db = RedisDatabaseNumber.Default)
+        public void FlushDatabase(RedisDatabaseNumber db)
         {
             var endPoints = GetEndPoints();
 

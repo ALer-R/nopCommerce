@@ -38,7 +38,7 @@ namespace Nop.Core.Caching
             // ConnectionMultiplexer.Connect should only be called once and shared between callers
             _connectionWrapper = connectionWrapper;
 
-            _db = _connectionWrapper.GetDatabase(RedisDatabaseNumber.Cache);
+            _db = _connectionWrapper.GetDatabase(config.RedisSpecificDatabaseId ?? (int)RedisDatabaseNumber.Cache);
         }
 
         #endregion

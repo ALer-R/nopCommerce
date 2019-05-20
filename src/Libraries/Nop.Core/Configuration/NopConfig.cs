@@ -38,9 +38,9 @@
         /// </summary>
         public string RedisConnectionString { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether we should use the default database only
+        /// Gets or sets a specific redis database; set NULL if should use the different database for each data type
         /// </summary>
-        public bool RedisUseDefaultDatabase { get; set; }
+        public int? RedisSpecificDatabaseId { get; set; }
         /// <summary>
         /// Gets or sets a value indicating whether the data protection system should be configured to persist keys in the Redis database
         /// </summary>
